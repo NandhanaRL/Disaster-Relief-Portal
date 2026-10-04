@@ -8,8 +8,8 @@ const startServer = async () => {
     // Initialize Database and Tables
     await initDb();
     
-    app.listen(PORT, () => {
-      console.log(`Disaster Relief Portal Backend running on http://localhost:${PORT}`);
+    app.listen(PORT, '0.0.0.0', () => {
+      console.log(`Disaster Relief Portal Backend running on port ${PORT}`);
     });
   } catch (error) {
     console.error('Failed to start backend server:', error);
